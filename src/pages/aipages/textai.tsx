@@ -24,7 +24,7 @@ const AIPage: React.FC = () => {
         body: JSON.stringify({ inputText: text }),
       });
       const data = await res.json();
-      setMessages([...messages, { text, isUser: true }, { text: `AI: ${data.aitext}`, isUser: false }]);
+      setMessages([...messages, { text, isUser: true }, { text: data.aitext, isUser: false }]);
     } catch (e) {
       console.error('Error fetching backend response:', e);
       setMessages([...messages, { text, isUser: true }, { text: 'Error fetching backend response.', isUser: false }]);
