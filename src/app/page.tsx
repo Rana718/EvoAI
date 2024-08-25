@@ -10,7 +10,7 @@ const LandingPage: React.FC = () => {
   const router = useRouter();
 
   const handlehome = () =>{
-    router.push('/aipage');
+    router.push('/aipages/textai');
   }
 
   return (
