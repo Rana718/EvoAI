@@ -21,7 +21,7 @@ const About: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    Our AI is capable of handling various queries including text-to-image, text-to-video, image-to-video, and more. Whether you're looking to generate creative visuals or need a quick video based on your images, our AI has you covered.
+                    Our AI is capable of handling various queries including text-to-image, text-to-video, image-to-video, and more. Whether you&#39;re looking to generate creative visuals or need a quick video based on your images, our AI has you covered.
                 </motion.p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -37,7 +37,7 @@ const About: React.FC = () => {
                             Enter any text, and our AI will generate a stunning image that matches your description.
                         </p>
                         <motion.img
-                            src="/path-to-your-image" // Replace with your image path
+                            src="/image"
                             alt="Text to Image"
                             className="w-full h-40 object-cover rounded-lg"
                             whileHover={{ scale: 1.05 }}
@@ -56,7 +56,7 @@ const About: React.FC = () => {
                             Generate a video based on the text you provide, perfect for quick video content creation.
                         </p>
                         <motion.img
-                            src="/path-to-your-video-thumbnail" // Replace with your video thumbnail path
+                            src="/video-thumbnail"
                             alt="Text to Video"
                             className="w-full h-40 object-cover rounded-lg"
                             whileHover={{ scale: 1.05 }}
@@ -75,7 +75,7 @@ const About: React.FC = () => {
                             Transform your images into engaging videos with just a few clicks.
                         </p>
                         <motion.img
-                            src="/path-to-your-image-video-thumbnail" // Replace with your image-to-video thumbnail path
+                            src="/image-video-thumbnail" 
                             alt="Image to Video"
                             className="w-full h-40 object-cover rounded-lg"
                             whileHover={{ scale: 1.05 }}
@@ -94,7 +94,7 @@ const About: React.FC = () => {
                             Our AI can handle all sorts of text queries, providing you with accurate and reliable results.
                         </p>
                         <motion.img
-                            src="/path-to-your-text-query-thumbnail" // Replace with your text query thumbnail path
+                            src="/text-query-thumbnail" 
                             alt="Normal Text Queries"
                             className="w-full h-40 object-cover rounded-lg"
                             whileHover={{ scale: 1.05 }}

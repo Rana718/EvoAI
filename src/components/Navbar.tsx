@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Navbar: React.FC = () => {
@@ -21,18 +22,18 @@ const Navbar: React.FC = () => {
 
                     {/* Navigation Links for Desktop */}
                     <ul className="hidden md:flex md:space-x-8">
-                        <li><a href="#features" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">Features</a></li>
-                        <li><a href="/About" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">About</a></li>
-                        <li><a href="#contact" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">Contact</a></li>
+                        <li><Link href="#features" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">Features</Link></li>
+                        <li><Link href="/About" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">About</Link></li>
+                        <li><Link href="#contact" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">Contact</Link></li>
                     </ul>
                 </div>
             </div>
             {/* Mobile Menu */}
             <div className={`md:hidden bg-gray-800 text-white ${isMenuOpen ? 'block' : 'hidden'}`}>
                 <ul className="flex flex-col space-y-4 py-4 px-6">
-                    <li><a href="#features" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">Features</a></li>
-                    <li><a href="/About" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">About</a></li>
-                    <li><a href="#contact" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">Contact</a></li>
+                    <li><Link href="#features" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">Features</Link></li>
+                    <li><Link href="/About" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">About</Link></li>
+                    <li><Link href="#contact" className="block py-2 px-4 hover:bg-gray-700 transition duration-300 rounded">Contact</Link></li>
                 </ul>
             </div>
         </nav>

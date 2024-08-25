@@ -22,7 +22,7 @@ const LandingPage: React.FC = () => {
             Welcome to AI App <span role="img" aria-label="sparkles">✨</span>
           </h1>
           <p className="text-2xl mb-8 leading-relaxed">
-            Harness the power of AI to generate text, images, and videos with ease. Whether you’re creating content or exploring new ideas, our AI tools are designed to help you achieve your goals effortlessly. <span role="img" aria-label="rocket">🚀</span>
+            Harness the power of AI to generate text, images, and videos with ease. Whether you&#39;re creating content or exploring new ideas, our AI tools are designed to help you achieve your goals effortlessly. <span role="img" aria-label="rocket">🚀</span>
           </p>
           <motion.button onClick={handlehome} 
             className="bg-yellow-400 text-gray-900 py-4 px-10 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-yellow-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-300"
@@ -37,17 +37,17 @@ const LandingPage: React.FC = () => {
             <div className="space-y-6">
               <blockquote className="bg-gray-800 p-6 rounded-lg shadow-md">
                 <p className="text-lg italic">
-                  "AI App is a game changer! The text generation is spot on, and the image and video tools are incredibly useful." - Alex R.
+                  &quot;AI App is a game changer! The text generation is spot on, and the image and video tools are incredibly useful.&quot; - Alex R.
                 </p>
               </blockquote>
               <blockquote className="bg-gray-800 p-6 rounded-lg shadow-md">
                 <p className="text-lg italic">
-                  "I've never seen such intuitive AI tools before. It's like having a personal assistant at your fingertips!" - Jordan T.
+                  &quot;I&#39;ve never seen such intuitive AI tools before. It&#39;s like having a personal assistant at your fingertips!&quot; - Jordan T.
                 </p>
               </blockquote>
               <blockquote className="bg-gray-800 p-6 rounded-lg shadow-md">
                 <p className="text-lg italic">
-                  "The user interface is sleek and modern, making it easy to navigate and get results quickly." - Taylor W.
+                  &quot;The user interface is sleek and modern, making it easy to navigate and get results quickly.&quot; - Taylor W.
                 </p>
               </blockquote>
             </div>
