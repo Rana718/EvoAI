@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EvoAI
 
-## Getting Started
+EvoAI is an evolving AI platform designed to handle various types of input, such as text-to-general text, text-to-image, and text-to-video. Currently, the platform is capable of handling text-to-general queries.
 
-First, run the development server:
+## Status
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🚧 **Under Development** 🚧
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This site is currently in development. At this stage, EvoAI can only process text-to-general queries. More features, including text-to-image and text-to-video, will be added in future updates.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- ✅ Text-to-General Query
+- ⏳ Text-to-Image (Coming Soon)
+- ⏳ Text-to-Video (Coming Soon)
 
-## Learn More
+## Project Links
 
-To learn more about Next.js, take a look at the following resources:
+- **GitHub Repository**: [EvoAI Repo](https://github.com/Rana718/EvoAI)
+- **Live Website**: [EvoAI Website](https://evo-ai.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Progress
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [x] Initial Setup
+- [x] Text-to-General Query Implementation
+- [ ] Text-to-Image Implementation
+- [ ] Text-to-Video Implementation
+- [ ] Testing & Debugging
+- [ ] Final Review
 
-## Deploy on Vercel
+## Future Plans
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Text-to-Image**: Enable the ability to generate images based on text input.
+- **Text-to-Video**: Enable the ability to generate videos based on text input.
+- **Enhanced Query Handling**: Improve the accuracy and capabilities of the text-to-general query processing.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact
+
+For updates, inquiries, or contributions, please visit the GitHub repository or the live website.
+
+- **GitHub**: [EvoAI Repo](https://github.com/Rana718/EvoAI)
+- **Website**: [EvoAI Website](https://evo-ai.vercel.app/)
+
+---
+
+Stay tuned for more features and updates as EvoAI continues to evolve!
