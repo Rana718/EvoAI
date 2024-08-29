@@ -5,24 +5,36 @@ import Aibar from '@/components/Aibar';
 export default function Imagegen() {
     const [prompt, setPrompt] = useState('');
     const [imageSrc, setImageSrc] = useState<string | null>(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setLoading(true);
+        setError(null);
 
-        const response = await fetch('/api/gen-image', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ prompt }),
-        });
+        try {
+            const response = await fetch('/api/gen-image', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ prompt }),
+            });
 
-        if (response.ok) {
-            const blob = await response.blob();
-            const imageUrl = URL.createObjectURL(blob);
-            setImageSrc(imageUrl);
-        } else {
-            console.error('Error generating image:', await response.json());
+            if (response.ok) {
+                const blob = await response.blob();
+                const imageUrl = URL.createObjectURL(blob);
+                setImageSrc(imageUrl);
+            } else {
+                const errorData = await response.json();
+                setError(errorData.error || 'Failed to generate image');
+            }
+        } catch (error) {
+            console.error('Error generating image:', error);
+            setError('Failed to generate image');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -40,12 +52,22 @@ export default function Imagegen() {
                         required
                         className="w-full p-3 border border-gray-300 rounded-md mb-4 focus:outline-none focus:border-blue-500"
                     />
-                    <button type="submit" className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-300">
-                        Generate
+                    <button
+                        type="submit"
+                        className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-300"
+                        disabled={loading}
+                    >
+                        {loading ? 'Generating...' : 'Generate'}
                     </button>
                 </form>
 
-                {imageSrc && (
+                {error && (
+                    <div className="mt-4 text-red-600">
+                        <p>{error}</p>
+                    </div>
+                )}
+
+                {imageSrc && !loading && (
                     <div className="mt-8">
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Generated Image:</h2>
                         <img src={imageSrc} alt="Generated" className="max-w-full h-auto rounded-md shadow-md"/>
